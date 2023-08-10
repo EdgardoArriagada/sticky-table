@@ -1,3 +1,9 @@
+:root {
+  --width: 150px;
+  --min-width: 150px;
+  --max-width: 150px;
+}
+
 .view {
   margin: auto;
   width: 600px;
@@ -11,21 +17,32 @@
 }
 
 .sticky-col {
-  position: -webkit-sticky;
   position: sticky;
+  left: 300px;
   background-color: white;
 }
 
 .first-col {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
+  width: var(--width);
+  min-width: var(--min-width);
+  max-width: var(--max-width);
   left: 0px;
 }
 
 .second-col {
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
-  left: 100px;
+  width: var(--width);
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  left: 150px;
+  border-right: 1px solid black;
+}
+
+td,
+th {
+  text-align: right;
+}
+
+td:not(.sticky-col),
+th:not(.sticky-col) {
+  background-color: aqua;
 }
